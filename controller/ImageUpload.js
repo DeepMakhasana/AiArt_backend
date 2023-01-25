@@ -4,7 +4,7 @@ const UploadModel = require('../model/Upload');
 // images Upload
 let storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, '../server/upload')
+        cb(null, '../upload')
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + "_" + file.originalname);
